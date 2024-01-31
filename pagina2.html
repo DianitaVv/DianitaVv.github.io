@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Tarjeta con Bootstrap</title>
+</head>
+<body>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Información</h5>
+
+      <div class="form-group">
+        <label for="campo1">Pais:</label>
+        <input type="text" class="form-control" id="pais" readonly value="Valor del Campo 1">
+      </div>
+
+      <div class="form-group">
+        <label for="campo2">Estado:</label>
+        <input type="text" class="form-control" id="estado" readonly value="Valor del Campo 2">
+      </div>
+
+      <div class="form-group">
+        <label for="campo3">Municipio:</label>
+        <input type="text" class="form-control" id="municipio" readonly value="Valor del Campo 3">
+      </div>
+
+      <div class="form-group">
+        <label for="campo4">Localidad:</label>
+        <input type="text" class="form-control" id="localidad" readonly value="Valor del Campo 4">
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+    var paisInfo = localStorage.getItem("paisInfo") || "Valor del Campo 1";
+    var estadoInfo = localStorage.getItem("estadoInfo") || "Valor del Campo 2";
+    var municipioInfo = localStorage.getItem("municipioInfo") || "Valor del Campo 3";
+    var localidadInfo = localStorage.getItem("localidadInfo") || "Valor del Campo 4";
+  
+    document.getElementById("pais").value = paisInfo;
+    document.getElementById("estado").value = estadoInfo;
+    document.getElementById("municipio").value = municipioInfo;
+    document.getElementById("localidad").value = localidadInfo;
+    
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./listas.js"></script>
+</body>
+</html>
